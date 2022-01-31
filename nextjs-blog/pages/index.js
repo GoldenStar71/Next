@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Router from 'next/router'
 import Head from 'next/head'
 
 function HomePage(props) {
@@ -8,7 +8,7 @@ function HomePage(props) {
             <title>Welcome to Next.js!</title>
          </Head>
          <div>Welcome to Next.js!</div>
-         <Link href="/posts/first"><a>First Post</a></Link>
+         <span onClick={() => Router.push('/post/one')}>First Post</span>
          <br/>
          <div>Next stars: {props.stars}</div>
          <img src="/logo.png" alt="TutorialsPoint Logo" />
